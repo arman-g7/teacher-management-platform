@@ -1,0 +1,58 @@
+{
+  "name": "teacher-management-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0 <25"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "node --import tsx scripts/migrate.ts",
+    "admin:create": "node --import tsx scripts/admin.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:e2e": "playwright test",
+    "admin:reset": "node --import tsx scripts/admin-reset.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/vazirmatn": "5.2.8",
+    "@radix-ui/react-slot": "1.2.4",
+    "@tailwindcss/postcss": "4.1.17",
+    "@vercel/blob": "2.4.0",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "drizzle-orm": "0.45.2",
+    "exceljs": "4.4.0",
+    "katex": "0.19.1",
+    "lucide-react": "0.468.0",
+    "next": "16.4.6",
+    "pg": "8.16.3",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "react-markdown": "10.1.0",
+    "recharts": "3.5.0",
+    "rehype-katex": "7.0.1",
+    "remark-math": "6.0.0",
+    "tailwind-merge": "3.3.1",
+    "tailwindcss": "4.1.17",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@types/node": "22.19.0",
+    "@types/pg": "8.15.6",
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "uuid": "11.1.1",
+    "katex": "0.19.1",
+    "postcss": "8.5.33",
+    "sharp": "0.35.5"
+  }
+}
